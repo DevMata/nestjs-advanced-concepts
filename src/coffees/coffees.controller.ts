@@ -6,8 +6,13 @@ import {
   Patch,
   Param,
   Delete,
+  Inject,
 } from '@nestjs/common';
-import { CoffeesDataSource, CoffeesService } from './coffees.service';
+import {
+  COFFEES_DATA_SOURCE,
+  CoffeesDataSource,
+  CoffeesService,
+} from './coffees.service';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 
@@ -15,6 +20,7 @@ import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 export class CoffeesController {
   constructor(
     private readonly coffeesService: CoffeesService,
+    @Inject(COFFEES_DATA_SOURCE)
     private readonly coffeesDataSource: CoffeesDataSource,
   ) {}
 
