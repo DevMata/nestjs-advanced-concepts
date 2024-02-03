@@ -20,7 +20,10 @@ export class IntervalScheduler
   ) {}
 
   onApplicationBootstrap() {
+    //  getting all the providers in the application
     const providers = this.discoveryService.getProviders();
+
+    // iterating over all the providers
     providers.forEach((wrapper) => {
       const { instance } = wrapper;
       const prototype = instance && Object.getPrototypeOf(instance);
@@ -28,6 +31,7 @@ export class IntervalScheduler
         return;
       }
 
+      //  checking if the provider is decorated with @IntervalHost
       const isIntervalHost =
         this.reflector.get<boolean>(INTERVAL_HOST_KEY, instance.constructor) ??
         false;
@@ -35,8 +39,12 @@ export class IntervalScheduler
         return;
       }
 
+      //  getting all the methods of the provider
       const methodKeys = this.metadataScanner.getAllMethodNames(prototype);
+
+      //  iterating over all the methods of the provider
       methodKeys.forEach((methodKey) => {
+        //  checking if the method is decorated with @Interval
         const interval = this.reflector.get<number>(
           INTERVAL_KEY,
           instance[methodKey],
