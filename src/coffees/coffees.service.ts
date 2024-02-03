@@ -20,9 +20,15 @@ export class CoffeesService {
 
   async create(createCoffeeDto: CreateCoffeeDto) {
     console.time();
-    const rewardsModuleRef = await this.lazyModuleLoader.load(() =>
-      import('../rewards/rewards.module').then((m) => m.RewardsModule),
+    //  this is another way to load a module dynamically
+    //  instead of using .then method we can use await
+    const { RewardsModule } = await import('../rewards/rewards.module');
+    const rewardsModuleRef = await this.lazyModuleLoader.load(
+      () => RewardsModule,
     );
+    /*const rewardsModuleRef = await this.lazyModuleLoader.load(() =>
+      import('../rewards/rewards.module').then((m) => m.RewardsModule),
+    );*/
     const { RewardsService } = await import('../rewards/rewards.service');
     const rewardsService = rewardsModuleRef.get(RewardsService);
     console.timeEnd();
