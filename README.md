@@ -22,6 +22,24 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## My notes
+
+### `medge`
+
+Use `medge` to check on the dependencies tree for the project
+
+To have a CLI representation of circular dependencies:
+```bash
+npx madge dist/main.js --circular
+```
+
+To have a visual representation of the whole tree:
+```bash
+npx madge dist/main.js --image circular.png
+```
+**Note:** to use `--image` you need to have `graphviz` installed on your machine.
+On macOS install it with `brew install graphviz`
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -57,17 +75,3 @@ $ yarn run test:e2e
 # test coverage
 $ yarn run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
