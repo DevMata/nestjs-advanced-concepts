@@ -1,8 +1,8 @@
 {
   "name": "nestjs-advanced-concepts",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Repo to follow the oficial NestJs course for Advanced Concepts",
+  "author": "Antonio Mata <antonio.mata.sv@gmail.com>",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
