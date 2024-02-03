@@ -25,6 +25,7 @@ export class IntervalScheduler
 
     // iterating over all the providers
     providers.forEach((wrapper) => {
+      // filtering out the providers that are not decorated with @Injectable
       const { instance } = wrapper;
       const prototype = instance && Object.getPrototypeOf(instance);
       if (!instance || !prototype) {
