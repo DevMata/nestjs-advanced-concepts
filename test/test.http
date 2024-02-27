@@ -4,5 +4,8 @@ Content-Type: application/json
 
 {}
 
+### GET /coffees
+GET http://localhost:3000/coffees
+
 ### GET /fibonacci
 GET http://localhost:3000/fibonacci?n=5
