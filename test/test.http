@@ -3,3 +3,6 @@ POST http://localhost:3000/coffees
 Content-Type: application/json
 
 {}
+
+### GET /fibonacci
+GET http://localhost:3000/fibonacci?n=5
