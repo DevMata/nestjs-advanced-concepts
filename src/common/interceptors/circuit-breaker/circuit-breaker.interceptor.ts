@@ -18,6 +18,7 @@ export class CircuitBreakerInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const methodRef = context.getHandler();
 
+    // note: the logic before the request goes here
     let circuitBreaker: CircuitBreaker;
     if (this.circuitBreakerByHandler.has(methodRef)) {
       circuitBreaker = this.circuitBreakerByHandler.get(methodRef);
@@ -26,6 +27,7 @@ export class CircuitBreakerInterceptor implements NestInterceptor {
       this.circuitBreakerByHandler.set(methodRef, circuitBreaker);
     }
 
+    // note: the logic after the request goes here
     return circuitBreaker.exec(next);
   }
 }

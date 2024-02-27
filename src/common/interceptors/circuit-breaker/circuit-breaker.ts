@@ -21,11 +21,13 @@ export class CircuitBreaker {
   exec(next: CallHandler) {
     if (this.state === CircuitBreakerState.Open) {
       if (this.nextAttempt > Date.now()) {
+        //  note: the last error is returned as an observable error
         return throwError(() => this.lastError);
       }
       this.state = CircuitBreakerState.HalfOpen;
     }
 
+    //  todo: research on the tap operator
     return next.handle().pipe(
       tap({
         next: () => this.handleSuccess(),
@@ -45,6 +47,7 @@ export class CircuitBreaker {
   }
 
   private handlerError(err: Error) {
+    console.log('🦊 error occurred', err.message);
     this.failureCount++;
     if (
       this.failureCount >= FAILURE_THRESHOLD ||
