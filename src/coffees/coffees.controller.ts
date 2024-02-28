@@ -18,8 +18,6 @@ import {
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 import { CircuitBreakerInterceptor } from '../common/interceptors/circuit-breaker/circuit-breaker.interceptor';
-import { EntityExistsPipe } from '../common/pipes/entity-exists/entity-exists-pipe.service';
-import { Coffee } from './entities/coffee.entity';
 
 @UseInterceptors(CircuitBreakerInterceptor)
 @Controller('coffees')
