@@ -9,3 +9,6 @@ GET http://localhost:3000/coffees
 
 ### GET /fibonacci
 GET http://localhost:3000/fibonacci?n=5
+
+### GET /payments-webhook
+GET http://localhost:3000/payments-webhook
