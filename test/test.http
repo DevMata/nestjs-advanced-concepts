@@ -16,3 +16,7 @@ GET http://localhost:3000/payments-webhook
 ### GET /users
 GET http://localhost:3000/users
 x-tenant-id: 3
+
+### GET /
+GET http://localhost:3000/
+accept-language: pl

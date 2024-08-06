@@ -1210,6 +1210,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/accept-language-parser@npm:^1.5.6":
+  version: 1.5.6
+  resolution: "@types/accept-language-parser@npm:1.5.6"
+  checksum: 52512037f06be19ed5eff01a58dca4e7ebdba91a0538f611336c6617edb12750d1d56ad47e42f87be5b967c4895e8308dfdcfe233130f9f05528cc98d30029f6
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.1.14":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
@@ -1462,6 +1469,13 @@ __metadata:
   version: 2.0.3
   resolution: "@types/stack-utils@npm:2.0.3"
   checksum: 72576cc1522090fe497337c2b99d9838e320659ac57fa5560fcbdcbafcf5d0216c6b3a0a8a4ee4fdb3b1f5e3420aa4f6223ab57b82fef3578bec3206425c6cf5
+  languageName: node
+  linkType: hard
+
+"@types/string-format@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@types/string-format@npm:2.0.3"
+  checksum: 8ca60b008d77e2e369bc60855985eda4566213935e56c7ffd29bdc04157b3931845045081179c2db2d338eb5b844cd55fd9a5f3ed11a762ea0f73599e0ae5da4
   languageName: node
   linkType: hard
 
@@ -1801,6 +1815,13 @@ __metadata:
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
   checksum: 0e994ad2aa6575f94670d8a2149afe94465de9cedaaaac364e7fb43a40c3691c980ff74899f682f4ca58fa96b4cbd7421a015d3a6defe43a442117d7821a2f36
+  languageName: node
+  linkType: hard
+
+"accept-language-parser@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "accept-language-parser@npm:1.5.0"
+  checksum: e32124e500f67d30da7dd15462b3ff7a718df327ff8bd1c97ae02d8ee5cf0917a3f600bf3b171965b1f95fef480b96d36752f674eff2cb0069c276d9783d32f6
   languageName: node
   linkType: hard
 
@@ -5349,12 +5370,15 @@ __metadata:
     "@nestjs/platform-express": ^10.0.0
     "@nestjs/schematics": ^10.0.0
     "@nestjs/testing": ^10.0.0
+    "@types/accept-language-parser": ^1.5.6
     "@types/express": ^4.17.17
     "@types/jest": ^29.5.2
     "@types/node": ^20.3.1
+    "@types/string-format": ^2.0.3
     "@types/supertest": ^6.0.0
     "@typescript-eslint/eslint-plugin": ^6.0.0
     "@typescript-eslint/parser": ^6.0.0
+    accept-language-parser: ^1.5.0
     eslint: ^8.42.0
     eslint-config-prettier: ^9.0.0
     eslint-plugin-prettier: ^5.0.0
@@ -5364,6 +5388,7 @@ __metadata:
     reflect-metadata: ^0.1.13
     rxjs: ^7.8.1
     source-map-support: ^0.5.21
+    string-format: ^2.0.0
     supertest: ^6.3.3
     ts-jest: ^29.1.0
     ts-loader: ^9.4.3
@@ -6445,6 +6470,13 @@ __metadata:
   version: 1.1.0
   resolution: "streamsearch@npm:1.1.0"
   checksum: 1cce16cea8405d7a233d32ca5e00a00169cc0e19fbc02aa839959985f267335d435c07f96e5e0edd0eadc6d39c98d5435fb5bbbdefc62c41834eadc5622ad942
+  languageName: node
+  linkType: hard
+
+"string-format@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "string-format@npm:2.0.0"
+  checksum: dada2ef95f6d36c66562c673d95315f80457fa7dce2f3609a2e75d1190b98c88319028cf0a5b6c043d01c18d581b2641579f79480584ba030d6ac6fceb30bc55
   languageName: node
   linkType: hard
 
