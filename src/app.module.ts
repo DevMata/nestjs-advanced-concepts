@@ -7,6 +7,7 @@ import { SchedulerModule } from './scheduler/scheduler.module';
 import { FibonacciModule } from './fibonacci/fibonacci.module';
 import { HttpClientModule } from './http-client/http-client.module';
 import { RecipesModule } from './recipes/recipes.module';
+import { TagsModule } from './tags/tags.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { RecipesModule } from './recipes/recipes.module';
       baseURL: 'https://nestjs.com',
     }),
     RecipesModule,
+    TagsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
